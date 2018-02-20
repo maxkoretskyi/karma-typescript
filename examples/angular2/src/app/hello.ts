@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import { Subject } from "@custom/rxjs";
+import { storeFreeze } from '@custom/ngrx-store-freeze';
 
 @Component({
     selector: "app-hello",
@@ -7,4 +9,8 @@ import { Component } from "@angular/core";
 })
 export class HelloComponent {
     public title = "Hello :)";
+    s = new Subject();
+    constructor() {
+        storeFreeze({})
+    }
 }

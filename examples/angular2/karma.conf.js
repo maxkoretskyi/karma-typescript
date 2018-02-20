@@ -13,6 +13,7 @@ module.exports = function(config) {
         },
 
         karmaTypescriptConfig: {
+            tsconfig: './tsconfig.json',
             bundlerOptions: {
                 entrypoints: /\.spec\.ts$/,
                 transforms: [
@@ -26,6 +27,8 @@ module.exports = function(config) {
 
         reporters: ["dots", "karma-typescript"],
 
-        browsers: ["Chrome"]
+        browsers: ["Chrome"],
+        
+        singleRun: true
     });
 };
