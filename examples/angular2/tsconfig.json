@@ -3,12 +3,19 @@
     "compilerOptions": {
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
+        "skipLibCheck": true,
         "target": "ES5",
         "module": "commonjs",
         "types": [
             "jasmine",
             "node"
-        ]
+        ],
+        "baseUrl": ".",
+        "paths": {
+            "@custom/*": [
+                "../../some/node_modules/*"
+            ]
+        }
     },
     "exclude": [
         "node_modules"
